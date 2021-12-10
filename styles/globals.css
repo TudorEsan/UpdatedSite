@@ -30,8 +30,15 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+div {
+  box-sizing: border-box;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    box-sizing: border-box;
+    background: #FAFAFA;
 }
 ol, ul {
 	list-style: none;
@@ -47,4 +54,33 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+p {
+	line-height: 1.3;
+}
+main {
+	background: red;
+}
+
+h1 {
+	font-size: 28px;
+
+}
+
+h2 {
+	font-size: 24px;
+	opacity: 0.9;
+}
+
+p {
+	font-size: 18px;
+	opacity: 0.8;
+}
+
+html {
+	height: 100%;
+}
+
+section {
+	margin: 100px 0 100px 0;
 }
