@@ -1,0 +1,22 @@
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.flex > div:nth-child(1) {
+    flex: 1 1 30%;
+    max-width: 450px;
+    min-width: 250px;
+}
+
+.hero {
+    flex: 1 1 50%;
+    min-width: 301px;
+    min-height: 250px;
+    max-width: 450px;
+}
+

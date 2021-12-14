@@ -15,13 +15,9 @@ const Menubar: NextPage<MenubarProps> = ({isOpen, onDismiss, setIsOpen}) => {
         setIsOpen(!isOpen)
     }
     
-    const onBlur = (e: SyntheticEvent) => {
-        e.preventDefault()
-        console.log('sdfsdf')
-    }
     return ( 
         <>
-            <div onBlur={onBlur} onClick={toggleMenuBar} className={styles.icon}>
+            <div onClick={toggleMenuBar} className={styles.icon}>
                 <div className={styles.line}></div>
                 <div className={styles.line}></div>
             </div>
@@ -29,16 +25,16 @@ const Menubar: NextPage<MenubarProps> = ({isOpen, onDismiss, setIsOpen}) => {
                 isOpen && (
                     <div className={styles.menubar}>
                     <Link href='/'>
-                        <p onClick={onDismiss} className={styles.white}>Home</p>
+                        <a onClick={onDismiss} className={styles.white}>Home</a>
                     </Link>
                     <Link href='/my-projects'>
-                        <p onClick={onDismiss} className={styles.white}>Projects</p>
+                        <a onClick={onDismiss} className={styles.white}>Projects</a>
                     </Link>
                     <Link href='/more-about-me'>
-                        <p onClick={onDismiss} className={styles.white}>About me!</p>
+                        <a onClick={onDismiss} className={styles.white}>About me!</a>
                     </Link>
                     <Link href='/contact'>
-                        <p onClick={onDismiss} className={styles.white}>Contact</p>
+                        <a onClick={onDismiss} className={styles.white}>Contact</a>
                     </Link>
                     </div>
                 )

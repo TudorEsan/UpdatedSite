@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import Content from '../components/Content'
 import styles from '../styles/home.module.css'
-import typo from '../styles/typography.module.css'
 import Image from 'next/image'
 import Card from '../components/Card'
 import { differenceInCalendarYears, differenceInCalendarMonths, differenceInCalendarDays} from 'date-fns'
+import HeadLayout from '../components/HeadLayout'
+import pageData from '../data/pageData'
+import Header from '../components/Header'
+import { PageInterface } from '../data/types'
 
-const Home: NextPage = () => {
+const Home: NextPage<PageInterface> = (props) => {
   const [date, setDate] = useState({
     years: 0,
     months: 0
@@ -37,43 +37,59 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Hi!</title>
-      </Head>
-      <div className={styles.flex}>
-        <div>
-          <h1>Hello World!</h1>
-          <h2>Welcome to my Website.</h2>
-        </div>
-        <div className={styles.hero}>
-          <Image priority={true} src='/Hero.svg' width={471}  height={471} />
-        </div>
-      </div>
-      <section >
+      <HeadLayout pageTitle={props.pageTitle} description={props.description} />
+      <Header title={props.title} subtitle={props.subtitle} image={props.image}/>
+      <section>
         <h2 className={styles.centered}>Bio</h2>
         <div className={styles.grid}>
-          <Image src='/sibiu.svg' height={107} width={107}/>
+          <Image quality={100} src="/sibiu.svg" height={107} width={107} alt='Sibiu Logo'/>
           <div className={styles.divider}></div>
-          <Image src='/brukenthal.svg' height={107} width={107}/>
+          <Image quality={100} src="/brukenthal.svg" height={107} width={107} alt='Brukenthal Photo'/>
           <div className={styles.divider}></div>
-          <Image src='/ubb.svg' height={107} width={107}/>
-          <p>Born in Sibiu {date.years} years {date.months} months ago.</p>
-          <p>Went to Brukenthal Highschool, where I was part of mathematics and computer science class</p>
-          <p>Currently i study at Babes Bolyai Faculty of Mathematics and Computer Science</p>
+          <Image quality={100} src="/ubb.svg" height={107} width={107} alt='Ubb University Logo'/>
+          <p>
+            Born in Sibiu {date.years} years {date.months} months ago.
+          </p>
+          <p>
+            Went to Brukenthal Highschool, where I was part of mathematics and
+            computer science class
+          </p>
+          <p>
+            Currently I study at Babes Bolyai Faculty of Mathematics and
+            Computer Science
+          </p>
         </div>
       </section>
       <section>
         <Card>
           <div className={styles.heading}>
-            <Image className={styles.me} objectPosition='0px -13px' src='/MyPhoto.jpg' objectFit='cover' height={150} width={150} />
+            <Image
+              className={styles.me}
+              objectPosition="0px -13px"
+              src="/MyPhoto.jpg"
+              objectFit="cover"
+              height={150}
+              width={150}
+            />
             <p className={styles.white}>Me!</p>
           </div>
-          <p className={styles.white}>I’m passionate about programming and ways in which technology can improve our everyday lives. I find Computer Science interesting, since abstracting real world problems into code is very fascinating.</p>
+          <p className={styles.white}>
+            I’m passionate about programming and ways in which technology can
+            improve our everyday lives. I find Computer Science interesting,
+            since abstracting real world problems into code is very fascinating.
+          </p>
         </Card>
       </section>
-      
     </>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  return {
+    props: {
+      ...pageData.home
+    }
+  }
 }
 
 export default Home

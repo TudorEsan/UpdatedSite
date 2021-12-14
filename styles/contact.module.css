@@ -1,0 +1,41 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.flex>div:nth-child(1) {
+    margin: auto;
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex>div:last-child {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.textarea {
+    height: 180px;
+}
+
+.mediaLinks {
+   display: flex;
+   gap: 10px;
+}
+
+.mediaLinks>a {
+    margin: auto 0;
+}
+
+.flex a {
+    color: rgba(0, 0, 0, 0.746);
+    text-decoration: none;
+    cursor: pointer;
+}

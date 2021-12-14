@@ -64,12 +64,12 @@ main {
 
 h1 {
 	font-size: 28px;
-
+	margin-bottom: 10px;
 }
 
 h2 {
 	font-size: 24px;
-	opacity: 0.9;
+	opacity: 0.8;
 }
 
 p {
@@ -83,4 +83,67 @@ html {
 
 section {
 	margin: 100px 0 100px 0;
+}
+
+input {
+	margin-bottom: 15px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 28px;
+	border: 3px solid #3B5249;
+	background: #FAFAFA;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-size: 18px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+textarea {
+	box-sizing: border-box;
+	font-size: 18px;
+	width: 100%;
+	height: 180px;
+	border: 3px solid #3B5249;
+	background: #FAFAFA;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	resize: none;
+	margin-bottom: 15px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+	user-select:none;
+	box-sizing: border-box;
+	font-size: 18px;
+	border: 3px solid #3B5249;
+	background: #FAFAFA;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+input:hover {
+	outline: none;
+}
+
+textarea:hover {
+	outline: none;
+}
+
+button:hover {
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+	transform: translateY(-3px);
+}
+button:focus{
+	outline: none;
+}
+
+@media(max-width: 640px) {
+	section {
+		margin: 50px 0;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover { color: red; }
 }

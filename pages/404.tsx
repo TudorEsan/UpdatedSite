@@ -10,7 +10,7 @@ const NotFound: NextPage<NotFoundProps> = () => {
         <div className={styles.grid}>
             <h1 className={styles.green}>404!</h1>
             <h2 className={styles.green}>You were not supposed to see this</h2>
-            <Image className={styles.rounded}  src='/surprisedCat.gif' height={256} width={343}/>
+            <Image priority className={styles.rounded}  src='/surprisedCat.gif' height={256} width={343}/>
         </div>
     );
 }
