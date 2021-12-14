@@ -55,7 +55,7 @@ const Home: NextPage<PageInterface> = (props) => {
             computer science class
           </p>
           <p>
-            I currently study at Babeș Bolyai Faculty of Mathematics and
+            I currently study at "Babes Bolyai" Faculty of Mathematics and
             Computer Science
           </p>
         </div>
