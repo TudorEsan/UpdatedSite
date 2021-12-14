@@ -114,6 +114,7 @@ textarea {
 }
 
 button {
+	font-weight: normal;
 	user-select:none;
 	box-sizing: border-box;
 	font-size: 18px;
