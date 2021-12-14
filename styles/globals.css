@@ -86,6 +86,7 @@ section {
 }
 
 input {
+	border-radius: 0;
 	margin-bottom: 15px;
 	box-sizing: border-box;
 	width: 100%;
@@ -98,6 +99,7 @@ input {
 }
 
 textarea {
+	border-radius: 0;
 	box-sizing: border-box;
 	font-size: 18px;
 	width: 100%;
