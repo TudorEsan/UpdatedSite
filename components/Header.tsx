@@ -23,6 +23,7 @@ const Header: NextPage<HeaderProps> = ({image, title, subtitle, dimension}) => {
         </div>
         <div className={styles.hero}>
           <Image
+            alt='hero'
             priority
             src={image}
             width={dimension ? dimension.width : 471}

@@ -22,7 +22,7 @@ const Navbar: NextComponentType = () => {
     return (
         <>
             <div className={styles.container}>
-                <Image priority className={styles.logo} src='/logo.svg' width={36} height={36} />
+                <Image alt='My Logo' priority className={styles.logo} src='/logo.svg' width={36} height={36} />
                 <Link href='/'>
                     <a className={cn({
                         [styles.page]: true,

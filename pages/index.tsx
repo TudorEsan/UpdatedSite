@@ -38,15 +38,37 @@ const Home: NextPage<PageInterface> = (props) => {
   return (
     <>
       <HeadLayout pageTitle={props.pageTitle} description={props.description} />
-      <Header title={props.title} subtitle={props.subtitle} image={props.image}/>
+      <Header
+        title={props.title}
+        subtitle={props.subtitle}
+        image={props.image}
+      />
       <section>
         <h2 className={styles.centered}>Bio</h2>
         <div className={styles.grid}>
-          <Image quality={100} src="/sibiu.svg" height={107} width={107} alt='Sibiu Logo'/>
+          <Image
+            quality={100}
+            src="/sibiu.svg"
+            height={107}
+            width={107}
+            alt="Sibiu Logo"
+          />
           <div className={styles.divider}></div>
-          <Image quality={100} src="/brukenthal.svg" height={107} width={107} alt='Brukenthal Photo'/>
+          <Image
+            quality={100}
+            src="/brukenthal.svg"
+            height={107}
+            width={107}
+            alt="Brukenthal Photo"
+          />
           <div className={styles.divider}></div>
-          <Image quality={100} src="/ubb.svg" height={107} width={107} alt='Ubb University Logo'/>
+          <Image
+            quality={100}
+            src="/ubb.svg"
+            height={107}
+            width={107}
+            alt="Ubb University Logo"
+          />
           <p>
             Born in Sibiu {date.years} years {date.months} months ago.
           </p>
@@ -55,8 +77,8 @@ const Home: NextPage<PageInterface> = (props) => {
             computer science class
           </p>
           <p>
-            I currently study at "Babes Bolyai" Faculty of Mathematics and
-            Computer Science
+            I currently study at &quot;Babes Bolyai&quot; Faculty of Mathematics
+            and Computer Science
           </p>
         </div>
       </section>
@@ -70,6 +92,7 @@ const Home: NextPage<PageInterface> = (props) => {
               objectFit="cover"
               height={150}
               width={150}
+              alt='photo of myself'
             />
             <p className={styles.white}>Me!</p>
           </div>

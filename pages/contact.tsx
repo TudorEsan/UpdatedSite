@@ -84,19 +84,19 @@ const Contact: NextPage<PageInterface> = (props) => {
           <div>
             <h2>You can find me online at</h2>
             <div className={styles.mediaLinks}>
-              <Image src="/Mail.svg" width={41} height={28} />
+              <Image alt='mail icon' src="/Mail.svg" width={41} height={28} />
               <a href="mailto:tudor.esan@icloud.com">tudor.esan@icloud.com</a>
             </div>
             <div className={styles.mediaLinks}>
-              <Image src="/phone.svg" width={38} height={38} />
+              <Image alt='phone icon' src="/phone.svg" width={38} height={38} />
               <a href="tel:+40757491686">+40 757 491 686</a>
             </div>
             <div className={styles.mediaLinks}>
-              <Image src="/instagram.svg" width={35} height={38} />
+              <Image alt='instagram icon' src="/instagram.svg" width={35} height={38} />
               <a href="https://www.instagram.com/tudoresan/">@tudoresan</a>
             </div>
             <div className={styles.mediaLinks}>
-              <Image src="/github.svg" width={38} height={38} />
+              <Image alt='github icon' src="/github.svg" width={38} height={38} />
               <a href="https://github.com/tudoresan">tudoresan</a>
             </div>
           </div>
