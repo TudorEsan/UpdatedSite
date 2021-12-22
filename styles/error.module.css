@@ -1,14 +1,10 @@
 .grid {
-    position: absolute;
     display: grid;
     grid-auto-flow: row;
     align-items: center;
     justify-content: center;
     gap: 20px 5px;
     margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) 
 
 }
 
