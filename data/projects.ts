@@ -56,20 +56,4 @@ const projects = [
 
     }
 ]
-
-export const getAllProjectsId = (projectsss: IProject[]) => {
-    return projectsss.map(proj => ({
-        params: {
-            id: proj.title.replaceAll(' ', '-')
-        }
-    })
-)}
-
-export function getProjData(id:string | undefined | string[]) {
-    if (id == undefined || Array.isArray(id)) {
-        return projects[0]
-    }
-  return projects.find((proj) => proj.title.replaceAll(' ', '-') === id)
-}
-
 export default projects;
