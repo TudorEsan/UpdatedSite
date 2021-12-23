@@ -45,7 +45,7 @@ export async function getStaticPaths() {
     const paths = projects.map((proj: IProject) => {
         return {
             params: { 
-                id: proj.title.replaceAll(' ', '-')
+                id: proj.title.replace(/\s/g, '-')
             }
         }
     })
