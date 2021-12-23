@@ -39,7 +39,7 @@ const Upset: NextPage<IUpset> = ({ setIsSorry }) => {
                 <textarea value={value} onChange={e => onChange(e)} name='appology' placeholder="Tell me you are sorry" />
                 {
                     error && (
-                        <p>Must contain 'sorry'</p>
+                        <p>Must contain &apos;sorry&apos;</p>
                     )
                 }
                 <button type='submit'>Send Appology</button>

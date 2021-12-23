@@ -22,3 +22,6 @@ export const Project = React.forwardRef<any, IProject>(({ title, shortDesc, img,
         </a>
     )
 })
+
+
+export default Project

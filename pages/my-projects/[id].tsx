@@ -25,7 +25,7 @@ const Project: NextPage<IPost> = ({ proj }) => {
                 <Image src={proj.img} width={620} height={360} />
             </div>
             <p className={style.indent}>{proj.desc}</p>
-            <h2>What I've learned:</h2>
+            <h2>What I&apos;ve learned:</h2>
             <ul>
                 {
                     proj.learnedAbilities.map((ability, index) => (
