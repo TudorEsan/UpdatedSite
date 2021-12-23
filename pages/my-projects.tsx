@@ -6,7 +6,6 @@ import { IProject, PageInterface } from '../data/types'
 import pageData from '../data/pageData'
 import { Project } from '../components/Project'
 import styles from '../styles/projects.module.css'
-import projects from '../data/projects'
 import Link from 'next/link'
 
 interface IMyProjects extends PageInterface {
@@ -44,8 +43,10 @@ const MyProjects: NextPage<IMyProjects> = (props) => {
 
 
 export const getStaticProps: GetStaticProps = async () => {
+    const req = await fetch('https://tudoresan.herokuapp.com/projects')
+    const { projects } = await req.json()
     return {
-        props: { ...pageData.myProjects, projects: projects }
+        props: { ...pageData.myProjects, projects }
     }
 }
 

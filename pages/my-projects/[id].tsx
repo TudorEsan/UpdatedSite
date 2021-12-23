@@ -1,9 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import projects from "../../data/projects";
 import { IProject } from "../../data/types";
-import { getAllProjectsId, getProjData } from "../../lib/proj";
 import style from '../../styles/project.module.css'
 
 
@@ -23,7 +21,7 @@ const Project: NextPage<IPost> = ({ proj }) => {
             </h2>
             <div className={style.imgCont}>
 
-                <Image src={proj.img} width={620} height={360} />
+                <Image priority src={proj.img} width={620} height={360} />
             </div>
             <p className={style.indent}>{proj.desc}</p>
             <h2>What I&apos;ve learned:</h2>
@@ -41,7 +39,17 @@ const Project: NextPage<IPost> = ({ proj }) => {
 }
 
 export async function getStaticPaths() {
-    const paths = getAllProjectsId(projects)
+    const req = await fetch('https://tudoresan.herokuapp.com/projects')
+    const { projects } = await req.json()
+
+    const paths = projects.map((proj: IProject) => {
+        return {
+            params: { 
+                id: proj.title.replaceAll(' ', '-')
+            }
+        }
+    })
+
     return {
         paths,
         fallback: false
@@ -49,10 +57,15 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const projData = getProjData(projects, params?.id)
+
+    const req = await fetch('https://tudoresan.herokuapp.com/projects')
+    const { projects } = await req.json()
+
+    const project = projects.find((proj: IProject) => params?.id === proj.title.replaceAll(' ', '-'))
+
     return {
         props: {
-            proj: projData
+            proj: project
         }
     }
 }
