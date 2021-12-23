@@ -61,7 +61,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const req = await fetch('https://tudoresan.herokuapp.com/projects')
     const { projects } = await req.json()
 
-    const project = projects.find((proj: IProject) => params?.id === proj.title.replaceAll(' ', '-'))
+    const project = projects.find((proj: IProject) => params?.id === proj.title.replace(/\s/g, '-'))
 
     return {
         props: {
