@@ -57,8 +57,8 @@ const projects = [
     }
 ]
 
-export const getAllProjectsId = (projects: IProject[]) => {
-    return projects.map(proj => ({
+export const getAllProjectsId = (projectsss: IProject[]) => {
+    return projectsss.map(proj => ({
         params: {
             id: proj.title.replaceAll(' ', '-')
         }
