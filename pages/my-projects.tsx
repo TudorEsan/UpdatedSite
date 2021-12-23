@@ -32,7 +32,7 @@ const MyProjects: NextPage<IMyProjects> = (props) => {
                 {
                     props.projects.map((proj) => (
                         <Link href={'/my-projects/' + proj.title.replaceAll(' ', '-')} key={proj.title} passHref>
-                            <Project  title={proj.title} img={proj.img} shortDesc={proj.shortDesc} />
+                            <Project href='/my-projects/'  title={proj.title} img={proj.img} shortDesc={proj.shortDesc} />
                         </Link>
                     ))
                 }
