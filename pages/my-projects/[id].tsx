@@ -1,7 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getAllProjectsId, getProjData } from '../../data/projects'
+import projects, { getAllProjectsId, getProjData } from '../../data/projects'
 import { IProject, PageInterface } from "../../data/types";
 import style from '../../styles/project.module.css'
 
@@ -40,7 +40,7 @@ const Project: NextPage<IPost> = ({ proj }) => {
 }
 
 export async function getStaticPaths() {
-    const paths = getAllProjectsId()
+    const paths = getAllProjectsId(projects)
     return {
         paths,
         fallback: false

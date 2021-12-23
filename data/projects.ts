@@ -1,3 +1,5 @@
+import { IProject } from "./types"
+
 const projects = [
     {
         img: '/sdt.jpeg',
@@ -55,7 +57,7 @@ const projects = [
     }
 ]
 
-export const getAllProjectsId = () => {
+export const getAllProjectsId = (projects: IProject[]) => {
     return projects.map(proj => ({
         params: {
             id: proj.title.replaceAll(' ', '-')
