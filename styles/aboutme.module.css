@@ -1,0 +1,72 @@
+.grid {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.reply {
+    margin-bottom: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.authorGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.lightText {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.green {
+    color: #3B5249;
+}
+
+.container {
+    display: flex;
+    max-width: 500px;
+    padding: 15px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.divider {
+    background-color: rgba(128, 128, 128, 0.5);
+    height: 2px;
+}
+
+.underline {
+    text-decoration: underline;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.booksDesc {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}

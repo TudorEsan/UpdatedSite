@@ -13,4 +13,13 @@ export interface HeaderInterface {
   };
 }
 
+export interface IProject {
+        img: string;
+        title: string;
+        shortDesc: string;
+        desc: string; 
+        learnedAbilities: string[];
+        github: string;
+}
+
 export interface PageInterface extends HeadInterface, HeaderInterface {}

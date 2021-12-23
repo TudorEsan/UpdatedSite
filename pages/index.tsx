@@ -70,10 +70,10 @@ const Home: NextPage<PageInterface> = (props) => {
             alt="Ubb University Logo"
           />
           <p>
-            Born in Sibiu {date.years} years {date.months} months ago.
+            Born in Sibiu {date.years} years and {date.months} months ago.
           </p>
           <p>
-            Went to Brukenthal Highschool, where I was part of mathematics and
+            Went to the german taught Brukenthal high school, where I was part of mathematics and
             computer science class
           </p>
           <p>
@@ -99,7 +99,7 @@ const Home: NextPage<PageInterface> = (props) => {
           <p className={styles.white}>
             I’m passionate about programming and ways in which technology can
             improve our everyday lives. I find Computer Science interesting,
-            since abstracting real world problems into code is very fascinating.
+            since abstracting real-world problems into code is very fascinating.
           </p>
         </Card>
       </section>

@@ -29,7 +29,7 @@ const Header: NextPage<HeaderProps> = ({
           {subtitle}
         </motion.h2>
       </div>
-      <motion.div variants={imageAnimation} initial='initial' animate='enter' className={styles.hero}>
+      <div>
         <Image
           alt="hero"
           priority
@@ -37,7 +37,7 @@ const Header: NextPage<HeaderProps> = ({
           width={dimension ? dimension.width : 471}
           height={dimension ? dimension.height : 471}
         />
-      </motion.div>
+      </div>
     </div>
   );
 };

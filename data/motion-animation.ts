@@ -7,7 +7,7 @@ export const stagger = {
   },
 };
 
-export const fadeInUp = {
+export   const fadeInUp = {
   initial: {
     y: -60,
     opacity: 0,
@@ -25,7 +25,7 @@ export const fadeInUp = {
 
 export const imageAnimation = {
   initial: {
-    x: 100,
+    x: 50,
     opacity: 0
   },
   enter: {
