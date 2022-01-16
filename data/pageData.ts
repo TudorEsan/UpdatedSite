@@ -30,7 +30,7 @@ const pageData: PageData = {
     pageTitle: "Tudor Esan | My Projects",
     description:
       "Here are some of my projects and extra curicular activities",
-    title: "My Projcts",
+    title: "My Projects",
     subtitle:
       "Here you can find some of my projects",
     image: "/Projects.svg",
