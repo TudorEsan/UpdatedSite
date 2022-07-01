@@ -87,7 +87,6 @@ const Home: NextPage<PageInterface> = (props) => {
           <div className={styles.heading}>
             <Image
               className={styles.me}
-              objectPosition="0px -13px"
               src="/MyPhoto.jpg"
               objectFit="cover"
               height={150}
