@@ -24,6 +24,39 @@ export const projects: IProject[] = [
     link: "http://financeapp.tudoresan.com/",
   },
   {
+    img: "/hackhaton.jpeg",
+    title: "SID Hackhaton 2022",
+    shortDesc:
+      "At this hackhaton I worked togheter with a team on a blockhain project. We got the 2nd place.",
+    github: "https://github.com/TheLuckyCoder/eBuletin",
+    desc: String.raw`
+    At this hackhaton I worked togheter with a team on a private blockhain project.
+    We created a blockhain that could be used to store documents such as Id cards, drivers licenses, etc. in a secure way.
+    At the end of the hackhaton we got the 2nd place.
+    `,
+    learnedAbilities: [
+      "Private Blockhains",
+      "POET - Proof of Elapsed Time",
+      "More about security",
+    ],
+  },
+  {
+    img: "/turingtumble.jpeg",
+    title: "Turing Tumble Ai",
+    shortDesc: "Teaching a Reinforcement Learning Agent to Play a Board Game",
+    github: "https://github.com/timurcarstensen/mtp-ai-turing-tumble",
+    desc: String.raw`
+      This is a college project I took part in. The goal was to teach a Reinforcement Learning Agent to play the Turing Tumble Board Game.
+      In the game Turing Tumble, players construct mechanical computers that use the flow of marbles along a board to solve logic problems. As the board and its parts are Turing complete, which means that they can be used to express any mathematical function, an intelligent agent taught to solve a Turing Tumble challenge essentially learns how to write code according to a given specification.
+
+      Following this logic, we taught an agent how to write a simple program according to a minimal specification, using an abstracted version of the Turing Tumble board as reinforcement learning training environment.
+
+      The linked website was built by me, and it has some further information about the project.
+    `,
+    learnedAbilities: ["Reinforcement Learning", "Rllib"],
+    link: "emtp2022.netlify.app",
+  },
+  {
     img: "/sdt.jpeg",
     title: "Secure Document Transfer",
     shortDesc:
