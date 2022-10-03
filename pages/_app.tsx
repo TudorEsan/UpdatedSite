@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
     if (window) {
       const storage = sessionStorage
-      console.log('sfsdf', storage.getItem('choice'))
       setOption(window.sessionStorage.getItem('choice'))
     }
   }, [])

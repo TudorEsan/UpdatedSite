@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { projects } from "../../data/myProjects";
 import { IProject } from "../../data/types";
 import style from '../../styles/project.module.css'
 
@@ -33,18 +34,19 @@ const Project: NextPage<IPost> = ({ proj }) => {
                 }
             </ul>
             <p className={style.green}>Github Link: <a className={style.link} href={proj.github}>{proj.github}</a></p>
+            {proj.link && (
+                <p className={style.green}>Project Link: <a className={style.link} href={proj.github}>{proj.link}</a></p>
+            )}
 
         </ div>
     )
 }
 
 export async function getStaticPaths() {
-    const req = await fetch('https://tudoresan.herokuapp.com/projects')
-    const { projects } = await req.json()
 
     const paths = projects.map((proj: IProject) => {
         return {
-            params: { 
+            params: {
                 id: proj.title.replace(/\s/g, '-')
             }
         }
@@ -58,8 +60,6 @@ export async function getStaticPaths() {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 
-    const req = await fetch('https://tudoresan.herokuapp.com/projects')
-    const { projects } = await req.json()
 
     const project = projects.find((proj: IProject) => params?.id === proj.title.replace(/\s/g, '-'))
 

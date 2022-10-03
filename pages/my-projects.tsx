@@ -7,6 +7,7 @@ import pageData from '../data/pageData'
 import { Project } from '../components/Project'
 import styles from '../styles/projects.module.css'
 import Link from 'next/link'
+import { projects } from '../data/myProjects'
 
 interface IMyProjects extends PageInterface {
     projects: IProject[]
@@ -31,7 +32,7 @@ const MyProjects: NextPage<IMyProjects> = (props) => {
                 {
                     props.projects.map((proj) => (
                         <Link href={'/my-projects/' + proj.title.replace(/\s/g, '-')} key={proj.title} passHref>
-                            <Project href='/my-projects/'  title={proj.title} img={proj.img} shortDesc={proj.shortDesc} />
+                            <Project href='/my-projects/' title={proj.title} img={proj.img} shortDesc={proj.shortDesc} />
                         </Link>
                     ))
                 }
@@ -43,8 +44,6 @@ const MyProjects: NextPage<IMyProjects> = (props) => {
 
 
 export const getStaticProps: GetStaticProps = async () => {
-    const req = await fetch('https://tudoresan.herokuapp.com/projects')
-    const { projects } = await req.json()
     return {
         props: { ...pageData.myProjects, projects }
     }
