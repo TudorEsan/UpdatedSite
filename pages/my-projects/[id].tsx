@@ -35,7 +35,7 @@ const Project: NextPage<IPost> = ({ proj }) => {
             </ul>
             <p className={style.green}>Github Link: <a className={style.link} href={proj.github}>{proj.github}</a></p>
             {proj.link && (
-                <p className={style.green}>Project Link: <a className={style.link} href={proj.github}>{proj.link}</a></p>
+                <p className={style.green}>Project Link: <a className={style.link} href={proj.link}>{proj.link}</a></p>
             )}
 
         </ div>
