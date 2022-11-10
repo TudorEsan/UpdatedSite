@@ -54,7 +54,7 @@ export const projects: IProject[] = [
       The linked website was built by me, and it has some further information about the project.
     `,
     learnedAbilities: ["Reinforcement Learning", "Rllib"],
-    link: "emtp2022.netlify.app",
+    link: "https://emtp2022.netlify.app",
   },
   {
     img: "/sdt.jpeg",
