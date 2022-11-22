@@ -27,7 +27,7 @@ export const projects: IProject[] = [
     img: "/hackhaton.jpeg",
     title: "SID Hackhaton 2022",
     shortDesc:
-      "At this hackhaton I worked togheter with a team on a blockhain project. We got the 2nd place.",
+      "At this hackhaton I worked togheter with a team on a blockchain project. We were awarded 2nd place.",
     github: "https://github.com/TheLuckyCoder/eBuletin",
     desc: String.raw`
     At this hackhaton I worked togheter with a team on a private blockhain project.
@@ -55,6 +55,7 @@ export const projects: IProject[] = [
     `,
     learnedAbilities: ["Reinforcement Learning", "Rllib"],
     link: "https://emtp2022.netlify.app",
+
   },
   {
     img: "/sdt.jpeg",
